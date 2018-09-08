@@ -13,6 +13,8 @@ import interfaz.TDAManejoDatos;
 
 import javax.swing.JButton;
 import java.awt.List;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.rmi.RemoteException;
 
 import javax.swing.JTextField;
@@ -37,6 +39,11 @@ public class ListarItemsVentaView extends JFrame {
 		
 		JButton btnVolver = new JButton("Volver");
 		btnVolver.setBounds(298, 199, 115, 29);
+		btnVolver.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				dispose();
+			}
+		});
 		contentPane.add(btnVolver);
 		
 		List list = new List();

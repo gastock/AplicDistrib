@@ -3,6 +3,8 @@ package views;
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.awt.List;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.rmi.RemoteException;
 
 import javax.swing.JButton;
@@ -40,6 +42,11 @@ public class ListarProductosView extends JFrame {
 
 		JButton btnVolver = new JButton("Volver");
 		btnVolver.setBounds(298, 210, 115, 29);
+		btnVolver.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				dispose();
+			}
+		});
 		contentPane.add(btnVolver);
 
 		List list = new List();

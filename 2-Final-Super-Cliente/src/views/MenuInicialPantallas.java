@@ -18,25 +18,33 @@ import interfaz.TDAManejoDatos;
 public class MenuInicialPantallas extends JFrame {
 	private static final long serialVersionUID = 3328992046678089154L;
 
-	//private static SistemaInscripciones sis = SistemaInscripciones.getInstancia();
+	private static MenuInicialPantallas sis ;
 
+	public MenuInicialPantallas getInstancia(){
+		if  (sis == null){
+			MenuInicialPantallas.sis = new MenuInicialPantallas();
+		}
+		return null;
+	}
 	/**
 	 * Launch the application.
 	 */
-//	public static void main(String[] args) {
-//		EventQueue.invokeLater(new Runnable() {
-//			public void run() {
-//				try {
-//					//		sis.loadFixtures();
-//					VentanaInicial frame = new VentanaInicial(manejoDatos);
-//					frame.setVisible(true);
-//				} catch (Exception e) {
-//					e.printStackTrace();
-//				}
-//			}
-//		});
-//	}
-
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					//		sis.loadFixtures();
+					MenuInicialPantallas frame = new MenuInicialPantallas();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+	MenuInicialPantallas(){
+		
+	}
 	/**
 	 * Create the frame.
 	 */

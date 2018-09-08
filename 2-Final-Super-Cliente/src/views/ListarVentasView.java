@@ -41,6 +41,11 @@ public class ListarVentasView extends JFrame {
 
 		JButton btnVolver = new JButton("Volver");
 		btnVolver.setBounds(298, 210, 115, 29);
+		btnVolver.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				dispose();
+			}
+		});
 		contentPane.add(btnVolver);
 
 		List list = new List();

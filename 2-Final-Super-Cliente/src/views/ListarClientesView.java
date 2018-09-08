@@ -15,6 +15,8 @@ import javax.swing.JTextPane;
 import javax.swing.JButton;
 import javax.swing.JTextArea;
 import java.awt.List;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.rmi.RemoteException;
 
 public class ListarClientesView extends JFrame {
@@ -40,6 +42,11 @@ public class ListarClientesView extends JFrame {
 		
 		JButton btnVolver = new JButton("Volver");
 		btnVolver.setBounds(298, 210, 115, 29);
+		btnVolver.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				dispose();
+			}
+		});
 		contentPane.add(btnVolver);
 		
 		List list = new List();
